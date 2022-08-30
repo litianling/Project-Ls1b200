@@ -1,0 +1,12 @@
+void *__malloc(size_t size);
+void *__calloc(size_t nitems, size_t size);
+void *__realloc(void *ptr, size_t size);
+void  __free(void *ptr);
+
+#define MALLOC      __malloc
+#define CALLOC      __calloc
+#define REALLOC     __realloc
+#define FREE        __free
+
+void *aligned_malloc(size_t size, unsigned int align);
+void  aligned_free(void *addr);

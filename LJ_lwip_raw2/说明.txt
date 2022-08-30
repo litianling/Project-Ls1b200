@@ -1,0 +1,10 @@
+1、新建1B裸机项目，选择lwIP-1.4.1组件
+
+2、修改lwipopts.h 配置文件：
+ 
+#define LWIP_RAW                        (!BSP_USE_OS)
+#define LWIP_SOCKET                     (BSP_USE_OS)
+#define LWIP_NETCONN                    (BSP_USE_OS)
+
+3、lwip_test.c 
+修改 local_ip 和 remote_ip 为合适的地址。

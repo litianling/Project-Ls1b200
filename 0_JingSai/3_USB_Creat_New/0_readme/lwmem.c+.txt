@@ -1,0 +1,23 @@
+//-------------------------------------------------------------------------------------------------
+// MY EXPAND Functions
+//-------------------------------------------------------------------------------------------------
+
+void *__malloc(size_t size)
+{
+    return lwmem_malloc(size);
+}
+
+void *__calloc(size_t nitems, size_t size)
+{
+    return lwmem_calloc(nitems, size);
+}
+
+void *__realloc(void *ptr, size_t size)
+{
+    return lwmem_realloc(ptr, size);
+}
+
+void __free(void *ptr)
+{
+    lwmem_free(ptr);
+}
